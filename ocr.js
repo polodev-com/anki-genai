@@ -1,9 +1,10 @@
+require('dotenv').config()
 const Tesseract = require('tesseract.js');
 const path = require('path');
 const fs = require('fs').promises;
 
 // Path to the folder containing your images
-const imagesDir = "/Users/tienhoangthanh/Documents/anki-images";
+const imagesDir = process.env.INPUT_IMAGES_PATH;
 
 /**
  * Processes a single image file with Tesseract.js.
